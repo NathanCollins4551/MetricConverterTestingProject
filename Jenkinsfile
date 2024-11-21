@@ -20,13 +20,7 @@ pipeline {
             }
             post {
                 always {
-                    //junit "build/reports/tests/**/*.xml"
-                    junitReporter{
-                        reportDir: 'build/reports/tests/test',
-                        reportFiles: 'test-report.xml',
-                        reportName: 'Test Report',
-                        xmlVersion: null
-                    }
+                    junit(testResults: "build/reports/tests/**/*.xml", allowEmptyResults: true)
                 }
             }
         }
