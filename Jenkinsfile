@@ -22,8 +22,8 @@ pipeline {
                 always {
                     //junit "build/reports/tests/**/*.xml"
                     publishHTML([
-                        reportDir: 'build/reports/tests',
-                        reportFiles: 'test-report.html',
+                        reportDir: 'build/reports/tests/test',
+                        reportFiles: 'index.html',
                         reportName: 'Test Report',
                         alwaysLinkToLastBuild: true,
                         allowMissing: true,
