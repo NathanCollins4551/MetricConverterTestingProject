@@ -20,12 +20,12 @@ pipeline {
             }
             post {
                 always {
-                    junit "build/reports/tests/**/*.xml"
-                    //publishHTML{
-                    //    reportDir: 'build/reports/tests/test',
-                    //    reportFiles: 'index.html'
-                    //    reportName: 'Test Report'
-                    //}
+                    //junit "build/reports/tests/**/*.xml"
+                    publishHTML{
+                        reportDir: 'build/reports/tests/test',
+                        reportFiles: 'test-report.xml',
+                        reportName: 'Test Report'
+                    }
                 }
             }
         }
