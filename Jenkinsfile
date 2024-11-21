@@ -24,7 +24,9 @@ pipeline {
                     publishHTML([
                         reportDir: 'build/reports/tests',
                         reportFiles: 'test-report.html',
-                        reportName: 'Test Report'
+                        reportName: 'Test Report',
+                        allowMissing: true,
+                        keepAll: true
                     ])
                 }
             }
