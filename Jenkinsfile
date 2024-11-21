@@ -25,6 +25,7 @@ pipeline {
                         reportDir: 'build/reports/tests',
                         reportFiles: 'test-report.html',
                         reportName: 'Test Report',
+                        alwaysLinkToLastBuild: true,
                         allowMissing: true,
                         keepAll: true
                     ])
