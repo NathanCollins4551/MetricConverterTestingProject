@@ -21,10 +21,11 @@ pipeline {
             post {
                 always {
                     //junit "build/reports/tests/**/*.xml"
-                    publishHTML{
+                    junitReporter{
                         reportDir: 'build/reports/tests/test',
                         reportFiles: 'test-report.xml',
-                        reportName: 'Test Report'
+                        reportName: 'Test Report',
+                        xmlVersion: null
                     }
                 }
             }
