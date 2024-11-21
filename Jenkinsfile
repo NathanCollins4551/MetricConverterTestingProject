@@ -20,7 +20,12 @@ pipeline {
             }
             post {
                 always {
-                    junit(testResults: "build/reports/tests/**/*.xml", allowEmptyResults: true)
+                    //junit "build/reports/tests/**/*.xml"
+                    publishHTML([
+                        reportDir: 'build/test-results/test',
+                        reportFiles: 'test-report.html',
+                        reportName: 'Test Report'
+                    ])
                 }
             }
         }
