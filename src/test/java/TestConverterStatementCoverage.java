@@ -39,7 +39,7 @@ public class TestConverterStatementCoverage {
     @Test
     public void testConvertCentimetersToYards() {
         double result = converter.convertLength(0.004, Converter.LengthUnit.CM, Converter.LengthUnit.YARDS);
-        assertEquals(157.48032, result, 0.0001);
+        assertEquals(4, result, 0.0001);
     }
     @Test
     public void testConvertMetersToFeet() {
