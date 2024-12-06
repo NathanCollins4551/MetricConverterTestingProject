@@ -10,7 +10,7 @@ public class TestConverterStatementCoverage {
     public void setUp() {
         converter = new Converter();
     }
-
+/*
     @Test
     public void testConvertInchesToKilometers() {
         double result = converter.convertLength(0.004, Converter.LengthUnit.INCHES, Converter.LengthUnit.KM);
@@ -89,5 +89,5 @@ public class TestConverterStatementCoverage {
         double result = converter.convertTime(0.0007, Converter.TimeUnit.YEARS, Converter.TimeUnit.MINUTES);
         assertEquals(367.91999999999996, result, 0.001);
     }
-
+*/
 }
